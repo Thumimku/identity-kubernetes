@@ -37,3 +37,14 @@ data:
     [keystore.primary]
     file_name = "wso2carbon.jks"
     password = "wso2carbon"
+    
+    [clustering]
+    membership_scheme="kubernetes"
+    domain="wso2is"
+    properties.membershipSchemeClassName="org.wso2.carbon.membership.scheme.kubernetes.KubernetesMembershipScheme"
+    properties.KUBERNETES_NAMESPACE="wso2"
+    properties.KUBERNETES_SERVICES= "wso2is-service"
+    properties.KUBERNETES_MASTER_SKIP_SSL_VERIFICATION="true"
+    properties.USE_DNS="false"
+    properties.KUBERNETES_API_SERVER=https://192.168.49.2:8443
+

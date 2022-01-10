@@ -31,7 +31,7 @@ spec:
             - "wso2is"
       containers:
       - name: wso2is
-        image: wso2/wso2is:5.10.0
+        image: thumidocker/upgraded-jackson:test_1
         livenessProbe:
           exec:
             command:
@@ -51,10 +51,10 @@ spec:
         imagePullPolicy: IfNotPresent
         resources:
           requests:
-            memory: "1Gi"
+            memory: "2Gi"
             cpu: "1000m"
           limits:
-            memory: "2Gi"
+            memory: "4Gi"
             cpu: "2000m"
         lifecycle:
           preStop:
